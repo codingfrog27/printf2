@@ -1,0 +1,20 @@
+
+for seeing what flag it is there's 3 ways
+
+1 if else tree (simple, but a little ugly)
+
+2 function ptr array
+
+3 jump/lookup table, with a valid check with it
+
+	static int	(*table[128])(va_list *) = \
+	{
+	['c'] = &print_char, ['s'] = &print_string, ['p'] = print_p, \
+	['d'] = &print_d, ['i'] = &print_i, ['u'] = &print_u, \
+	['x'] = &print_x, ['X'] = &print_X
+	};
+
+
+
+
+
