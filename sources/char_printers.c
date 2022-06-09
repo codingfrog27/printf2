@@ -6,11 +6,11 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/07 17:00:46 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/09 12:44:51 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/09 18:54:25 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	print_char(va_list *ap)
 {
@@ -24,6 +24,6 @@ int	print_string(va_list *ap)
 
 	str = va_arg(*ap, char *);
 	if (!str)
-		return (write(1, "(null)", 1));
+		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
 }

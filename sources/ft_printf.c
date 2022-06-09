@@ -6,11 +6,11 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/07 13:31:38 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/09 18:35:38 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/09 19:00:00 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	is_valid_flag(char c)
 {
@@ -21,7 +21,7 @@ int	is_valid_flag(char c)
 	i = 0;
 	while (flags)
 	{
-		if (c ==flags[i])
+		if (c == flags[i])
 			return (1);
 		i++;
 	}
@@ -34,7 +34,7 @@ int	flag_checker(char c, va_list *ap)
 	{
 	['c'] = &print_char, ['s'] = &print_string, ['p'] = print_p, \
 	['d'] = &print_nbr, ['i'] = &print_nbr, ['u'] = &print_uns_nbr, \
-	['x'] = &print_x, ['X'] = &print_X
+	['x'] = &print_x, ['X'] = &print_upper_x
 	};
 
 	if (!is_valid_flag(c))
