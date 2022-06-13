@@ -37,7 +37,7 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
 test: $(NAME)
-	@$(CC) $(CFLAGS) $(NAME) testing.c -LLIBFT -lft -L. -lftprintf -I$(SRC_DIR) -ILIBFT/ -o cute_little_test
+	@$(CC) $(NAME) testing.c -LLIBFT -lft -L. -lftprintf -I$(SRC_DIR) -ILIBFT/ -o cute_little_test
 	@printf "$(PURPLE)\n:*✧･ﾟ cute_little_test :*✧･ﾟ $(WHITE)has been made :) \n\n\n"
 
 

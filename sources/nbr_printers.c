@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/09 13:11:38 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/09 19:00:49 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/13 16:58:46 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	print_nbr(va_list *ap)
 
 	nstr = ft_itoa(va_arg(*ap, int));
 	len = ft_strlen(nstr);
+	write(1, nstr, len);
 	free(nstr);
 	return (len);
 }
@@ -26,10 +27,7 @@ int	print_nbr(va_list *ap)
 int	print_uint_rec(unsigned int nbr)
 {
 	if (nbr > 9)
-	{
-		print_uint_rec(nbr / 10);
-		print_uint_rec(nbr % 10);
-	}
+		return (print_uint_rec(nbr / 10) + print_uint_rec(nbr % 10));
 	return (write(1, &nbr, 1));
 }
 
