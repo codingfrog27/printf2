@@ -5,11 +5,11 @@
 int main()
 {
 	int i, j;
-	void	*test;
+	int	test = 9;
+	void	*ptr = &test;
 
-	test = ULLONG_MAX;
-	i = printf("%p\n", test);
-	j = ft_printf("%p\n", test);
+	i = printf("%u\n", test);
+	j = ft_printf("%u\n", test);
 	printf("and printf returns %i, while mine returns %i", i, j);
 	return 0;
 }

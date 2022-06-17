@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/07 13:31:38 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/13 16:49:51 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/17 16:25:28 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	flag_checker(char c, va_list *ap)
 {
 	static int	(*table[128])(va_list *) = \
 	{
-	['c'] = &print_char, ['s'] = &print_string, ['p'] = print_p, \
+	['c'] = &print_char, ['s'] = &print_string, ['p'] = &print_p, \
 	['d'] = &print_nbr, ['i'] = &print_nbr, ['u'] = &print_uns_nbr, \
 	['x'] = &print_x, ['X'] = &print_upper_x
 	};

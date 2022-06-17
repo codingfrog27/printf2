@@ -6,13 +6,13 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/09 12:45:43 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/10 21:47:24 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/17 20:51:00 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	hex_convert(unsigned int n, bool is_upper)
+int	hex_convert(unsigned long n, bool is_upper)
 {
 	char	*lowercase;
 	char	*uppercase;
@@ -28,20 +28,18 @@ int	hex_convert(unsigned int n, bool is_upper)
 
 int	print_p(va_list *ap)
 {
-	unsigned int	adress;
+	unsigned long	adress;
 
-	adress = (unsigned int)va_arg(*ap, void *);
-	if (!adress)
-		return (write(1, "0", 1));
+	adress = (unsigned long)va_arg(*ap, void *);
 	return (write(1, "0x", 2) + hex_convert(adress, false));
 }
 
 int	print_x(va_list *ap)
 {
-	return (hex_convert(va_arg(*ap, unsigned int), false));
+	return (hex_convert(va_arg(*ap, unsigned long), false));
 }
 
 int	print_upper_x(va_list *ap)
 {
-	return (hex_convert(va_arg(*ap, unsigned int), true));
+	return (hex_convert(va_arg(*ap, unsigned long), true));
 }

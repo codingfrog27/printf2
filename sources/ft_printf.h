@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/07 13:32:46 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/09 18:59:52 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/17 21:00:36 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	print_string(va_list *ap);
 int	print_p(va_list *ap);
 int	print_nbr(va_list *ap);
 int	print_uns_nbr(va_list *ap);
+int	print_uint_rec(unsigned int nbr);
 int	print_x(va_list *ap);
 int	print_upper_x(va_list *ap);
 
