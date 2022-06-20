@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/09 12:45:43 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/17 20:51:00 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/20 21:16:49 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ int	print_p(va_list *ap)
 
 int	print_x(va_list *ap)
 {
-	return (hex_convert(va_arg(*ap, unsigned long), false));
+	return (hex_convert(va_arg(*ap, unsigned int), false));
 }
 
 int	print_upper_x(va_list *ap)
 {
-	return (hex_convert(va_arg(*ap, unsigned long), true));
+	return (hex_convert(va_arg(*ap, unsigned int), true));
 }

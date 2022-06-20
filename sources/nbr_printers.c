@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/09 13:11:38 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/06/17 21:33:32 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/06/20 19:06:17 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	print_uint_rec(unsigned int nbr)
 {
 	if (nbr > 9)
 		return (print_uint_rec(nbr / 10) + print_uint_rec(nbr % 10));
-	return();
+	nbr += '0';
+	return(write(1, &nbr, 1));
 }
 //write with &nbr doesnt work cause it needs the = '0' but you cant do adress plus zero so either add the =0 on a different line
 //or use a different sulation like a little uitoa
